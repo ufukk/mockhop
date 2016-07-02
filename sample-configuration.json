@@ -1,0 +1,39 @@
+{
+	"services": [
+		{ 
+			"url": "users",
+			"data": [
+				{"userId": 1, "userName": "test1"},
+				{"userId": 2, "userName": "test2"},
+				{"userId": 3, "userName": "test3"}
+			],
+			"validation": [
+				{"userName": "required"}
+			],
+			"cases": [
+				{
+					"parameters": {"userName": "admin"},
+					"data": {
+						"append": [
+							{"userId": 4, "userName": "test4"}
+						]
+					}
+
+				},
+				{
+					"parameters": {"userName": "guest"},
+					"data": {
+						"replace": [
+							{"userId": 5, "userName": "test5"},
+							{"userId": 6, "userName": "test6"}
+						]
+					}
+				}
+			]
+		}
+
+	]
+		
+
+
+}
